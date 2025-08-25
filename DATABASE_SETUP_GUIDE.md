@@ -1,3 +1,5 @@
+<!-- @format -->
+
 # How to Get Database Credentials for Production
 
 ## 🎯 Quick Setup Guide
@@ -51,7 +53,8 @@
 
 ### Step 1: Update .env.production
 
-Replace the placeholder values in `.env.production` with your actual credentials:
+Replace the placeholder values in `.env.production` with your actual
+credentials:
 
 ```bash
 # Example with Supabase
@@ -101,6 +104,7 @@ DB_NAME=postgres
 ## 🆘 Need Help?
 
 If you're stuck, I can help you:
+
 1. Set up any of these database providers
 2. Configure the connection
 3. Run the database migrations

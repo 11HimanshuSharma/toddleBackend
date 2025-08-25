@@ -1,8 +1,12 @@
+<!-- @format -->
+
 # Netlify Deployment Guide for Social Media Backend
 
 ## Prerequisites
 
-1. **Database Setup**: You need a cloud PostgreSQL database (recommended providers):
+1. **Database Setup**: You need a cloud PostgreSQL database (recommended
+   providers):
+
    - **Supabase** (Free tier available): https://supabase.com/
    - **ElephantSQL** (Free tier available): https://www.elephantsql.com/
    - **Aiven** (Free tier available): https://aiven.io/
@@ -36,6 +40,7 @@
 #### Option A: Git Integration (Recommended)
 
 1. **Push your code to GitHub/GitLab/Bitbucket**
+
    ```bash
    git add .
    git commit -m "Prepare for Netlify deployment"
@@ -43,6 +48,7 @@
    ```
 
 2. **Connect to Netlify**:
+
    - Go to https://app.netlify.com/
    - Click "New site from Git"
    - Choose your Git provider
@@ -53,6 +59,7 @@
      - **Functions directory**: `netlify/functions`
 
 3. **Set Environment Variables**:
+
    - Go to Site Settings → Environment Variables
    - Add the following variables:
      ```
@@ -73,6 +80,7 @@
 #### Option B: Manual Deploy
 
 1. **Build locally**:
+
    ```bash
    npm run build
    ```
@@ -94,7 +102,8 @@
 
 ## Important Notes
 
-1. **Environment Variables**: Never commit production credentials to your repository
+1. **Environment Variables**: Never commit production credentials to your
+   repository
 2. **Database**: Use a cloud database provider, not localhost
 3. **JWT Secret**: Use a strong, unique secret for production
 4. **CORS**: Update FRONTEND_URL with your actual frontend domain
@@ -102,7 +111,8 @@
 
 ## Troubleshooting
 
-1. **Function timeout**: Netlify functions have a 10-second timeout on the free plan
+1. **Function timeout**: Netlify functions have a 10-second timeout on the free
+   plan
 2. **Database connections**: Cloud databases may require SSL connections
 3. **Environment variables**: Ensure all required variables are set in Netlify
 4. **Build errors**: Check the deploy logs in Netlify dashboard
@@ -124,7 +134,8 @@ curl -X POST https://your-site-name.netlify.app/api/auth/register \
 ## Free Tier Limitations
 
 - **Netlify**: 125,000 function calls per month, 10-second timeout
-- **Database providers**: Usually offer limited storage and connections on free tiers
+- **Database providers**: Usually offer limited storage and connections on free
+  tiers
 
 ## Custom Domain (Optional)
 
