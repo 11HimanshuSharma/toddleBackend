@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Backend API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .endpoint {
+      background: #f8f9fa;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border-left: 4px solid #007bff;
+    }
+
+    .method {
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    code {
+      background: #e9ecef;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🚀 Social Media Backend API</h1>
+    <p>Welcome to the Social Media Backend API deployed on Netlify Functions!</p>
+
+    <h2>Available Endpoints:</h2>
+
+    <div class="endpoint">
+      <div class="method">GET</div>
+      <code>/api/health</code> - Health check endpoint
+    </div>
+
+    <div class="endpoint">
+      <div class="method">POST</div>
+      <code>/api/auth/register</code> - User registration
+    </div>
+
+    <div class="endpoint">
+      <div class="method">POST</div>
+      <code>/api/auth/login</code> - User login
+    </div>
+
+    <div class="endpoint">
+      <div class="method">GET</div>
+      <code>/api/users</code> - Get users
+    </div>
+
+    <div class="endpoint">
+      <div class="method">GET</div>
+      <code>/api/posts</code> - Get posts
+    </div>
+
+    <div class="endpoint">
+      <div class="method">POST</div>
+      <code>/api/posts</code> - Create post
+    </div>
+
+    <div class="endpoint">
+      <div class="method">GET</div>
+      <code>/api/comments</code> - Get comments
+    </div>
+
+    <div class="endpoint">
+      <div class="method">GET</div>
+      <code>/api/likes</code> - Get likes
+    </div>
+
+    <p><strong>Base URL:</strong> Your Netlify app URL + <code>/api/</code></p>
+    <p><strong>Documentation:</strong> Check the repository for detailed API documentation.</p>
+  </div>
+</body>
+
+</html>
