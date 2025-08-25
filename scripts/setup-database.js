@@ -18,28 +18,7 @@ const setupDatabase = async () => {
     password: String(process.env.DB_PASSWORD),
   });
 
-  try {
-    console.log("Setting up database...");
-
-    // Drop existing objects first
-    console.log("Dropping existing database objects...");
-    const dropSQL = `
-      -- Drop triggers
-      DROP TRIGGER IF EXISTS update_users_updated_at ON users;
-      DROP TRIGGER IF EXISTS update_posts_updated_at ON posts;
-      DROP TRIGGER IF EXISTS update_comments_updated_at ON comments;
-      
-      -- Drop function
-      DROP FUNCTION IF EXISTS update_updated_at_column();
-      
-      -- Drop tables (in reverse order of dependencies)
-      DROP TABLE IF EXISTS follows CASCADE;
-      DROP TABLE IF EXISTS likes CASCADE;
-      DROP TABLE IF EXISTS comments CASCADE;
-      DROP TABLE IF EXISTS posts CASCADE;
-      DROP TABLE IF EXISTS users CASCADE;
-    `;
-
+  
     await pool.query(dropSQL);
     console.log("Existing database objects dropped successfully");
 
