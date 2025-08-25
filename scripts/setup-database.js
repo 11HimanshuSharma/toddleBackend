@@ -18,7 +18,7 @@ const setupDatabase = async () => {
     password: String(process.env.DB_PASSWORD),
   });
 
-  
+  try {
     await pool.query(dropSQL);
     console.log("Existing database objects dropped successfully");
 
